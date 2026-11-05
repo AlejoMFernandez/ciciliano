@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ciciliano · Masa madre y laminados en Coghlan</title>
+<meta property="og:image" content="https://ciciliano.vercel.app/img/og.jpg?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Ciciliano: masa madre y laminados en Coghlan, hasta agotar stock">
+<meta property="og:title" content="Ciciliano · Hasta agotar stock">
+<meta property="og:description" content="Croissants, panes de masa madre y tortas por encargo en Coghlan.">
+<meta property="og:url" content="https://ciciliano.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ciciliano">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ciciliano.vercel.app/img/og.jpg?v=1">
+<meta name="description" content="Ciciliano: pan de masa madre, laminados y café de especialidad en Av. Congreso 3201, Coghlan. Mirá qué queda hoy, guardate el tuyo para retirar y encargá tu torta.">
+<meta name="theme-color" content="#F2E8D5">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch.png">
+<script>
+  (function () {
+    var d = document.documentElement; d.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('con-intro');
+  })();
+</script>
+<link rel="preload" as="font" type="font/woff2" href="fonts/fraunces-latin-600-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/figtree-latin-400-normal.woff2" crossorigin>
+<link rel="stylesheet" href="css/fuentes.css?v=1">
+<link rel="preload" as="image" imagesrcset="img/f/hero-celu-480.webp 480w, img/f/hero-celu-800.webp 800w, img/f/hero-celu-1100.webp 1100w" imagesizes="92vw" media="(max-width: 899px)">
+<link rel="preload" as="image" imagesrcset="img/f/hero-desk-800.webp 800w, img/f/hero-desk-1300.webp 1300w" imagesizes="46vw" media="(min-width: 900px)">
+<link rel="stylesheet" href="kit/kit.css?v=1">
+<link rel="stylesheet" href="css/estilos.css?v=1">
+</head>
+<body>
+
+<!-- ============ INTRO: la vidriera se dibuja a tiza ============ -->
+<div class="intro" aria-hidden="true">
+  <div class="intro__panos"><span class="intro__pano"></span><span class="intro__pano"></span><span class="intro__pano"></span></div>
+  <div class="intro__marca">
+    <svg class="intro__luna" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 30c6-14 18-22 28-22s22 8 28 22"/><path pathLength="1" d="M4 30c4 2 8 2 12-2"/><path pathLength="1" d="M60 30c-4 2-8 2-12-2"/><path pathLength="1" d="M18 14c2 6 2 12 0 16"/><path pathLength="1" d="M32 8v22"/><path pathLength="1" d="M46 14c-2 6-2 12 0 16"/></svg>
+    <img class="intro__logo" src="img/logo-claro.svg" alt="" width="2419" height="477">
+  </div>
+</div>
+
+<a class="saltar" href="#hoy">Ir a la bandeja de hoy</a>
+
+<!-- ============ BARRA ============ -->
+<header class="barra" data-barra>
+  <div class="barra__in">
+    <a class="barra__logo" href="#inicio" aria-label="Ciciliano, inicio"><img src="img/logo.svg" alt="Ciciliano" width="2419" height="477"></a>
+    <nav class="barra__nav" aria-label="Secciones">
+      <a href="#hoy">Hoy en la bandeja</a>
+      <a href="#carta">Carta</a>
+      <a href="#tortas">Tortas por encargo</a>
+      <a href="#capas">Cómo lo hacemos</a>
+      <a href="#visitanos">Visitanos</a>
+    </nav>
+    <button type="button" class="bolsa-btn" data-kit-open="carrito" data-kit-target aria-label="Tu bolsa">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.1 11.2a1 1 0 0 1-1 .8H7.1a1 1 0 0 1-1-.8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="bolsa-btn__t">Tu bolsa</span>
+      <span class="bolsa-btn__n" data-bolsa-n>0</span>
+    </button>
+    <button type="button" class="menu-btn" data-menu-abrir aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <div class="menu__top">
+    <img src="img/logo-claro.svg" alt="Ciciliano" width="2419" height="477" class="menu__logo">
+    <button type="button" class="menu__cerrar" data-menu-cerrar aria-label="Cerrar menú"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="menu__nav" aria-label="Menú">
+    <a href="#hoy">Hoy en la bandeja</a>
+    <a href="#carta">Carta</a>
+    <a href="#tortas">Tortas por encargo</a>
+    <a href="#capas">Cómo lo hacemos</a>
+    <a href="#visitanos">Visitanos</a>
+  </nav>
+  <p class="menu__pie">Martes a sábados 8:30 a 18:00 hs<br>Domingos 8:30 a 16:00 hs<br><span class="tiza">o hasta agotar stock</span></p>
+  <a class="panel-link" href="admin/" target="_blank" rel="noopener">Probá el panel del dueño</a>
+</div>
+
+<main id="inicio">
+
+<!-- ============ HERO A · Recién salido ============ -->
+<section class="hero" aria-labelledby="hero-t">
+  <div class="hero__in">
+    <div class="hero__texto">
+      <p class="hero__kicker tiza" data-kicker><span class="solo-desk">pan de </span>masa madre · laminados · café<span class="solo-desk"> de especialidad</span></p>
+      <h1 class="hero__t" id="hero-t"><span class="ln"><span>Masa madre</span></span> <span class="ln"><span>y laminados,</span></span> <span class="ln"><span>hasta agotar</span></span> <span class="ln"><span>stock.</span></span></h1>
+      <p class="hero__sub">Mirá en vivo qué queda en la bandeja, guardate el tuyo para retirar y encargá tu torta.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--corteza" href="#hoy">Guardame uno</a>
+        <a class="btn btn--linea" href="#tortas">Encargar torta</a>
+      </div>
+      <p class="hero__estado" data-estado>Martes a sábados 8:30 a 18:00 hs · Av. Congreso 3201</p>
+    </div>
+    <figure class="hero__foto">
+      <picture>
+        <source media="(min-width: 900px)" srcset="img/f/hero-desk-800.webp 800w, img/f/hero-desk-1300.webp 1300w" sizes="46vw">
+        <img src="img/f/hero-celu-800.webp" srcset="img/f/hero-celu-480.webp 480w, img/f/hero-celu-800.webp 800w, img/f/hero-celu-1100.webp 1100w" sizes="92vw" alt="Bandeja de medialunas de manteca recién horneadas" width="1440" height="1911" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero__ticket" data-ticket>
+        <span class="hero__ticket-k">Hoy en la bandeja</span>
+        <ul class="hero__ticket-l" data-ticket-lista>
+          <li><span>medialunas</span><b>&nbsp;</b></li>
+          <li><span>croissants</span><b>&nbsp;</b></li>
+          <li><span>danesas</span><b>&nbsp;</b></li>
+        </ul>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ LA BANDEJA DE HOY ============ -->
+<section class="hoy" id="hoy" aria-labelledby="hoy-t">
+  <div class="hoy__in">
+    <header class="sec-cab rv">
+      <p class="tiza sec-cab__k" data-momento-k>recién salido del horno</p>
+      <h2 class="sec-cab__t" id="hoy-t">La bandeja de hoy</h2>
+      <p class="sec-cab__sub" data-momento-sub>Lo que salió del horno y cuánto queda. Tocá una pieza y te la guardamos para retirar.</p>
+    </header>
+    <div class="hoy__grid">
+      <div class="bandeja rv" data-bandeja-wrap>
+        <div class="bandeja__marco">
+          <ul class="bandeja__piezas" data-bandeja aria-label="Productos de hoy"></ul>
+        </div>
+        <p class="bandeja__pie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="8.5"/></svg><span data-bandeja-pie>Ciciliano carga la horneada cada mañana desde su panel y cada reserva descuenta.</span><a class="panel-link" href="admin/" target="_blank" rel="noopener">Probá el panel del dueño</a></p>
+      </div>
+      <aside class="pieza" data-pieza aria-labelledby="pieza-t" aria-live="polite">
+        <div class="pieza__hoja">
+          <button type="button" class="pieza__cerrar" data-pieza-cerrar aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          <figure class="pieza__foto"><img src="img/f/medialunas-700.webp" alt="" width="700" height="929" data-pieza-img decoding="async"></figure>
+          <div class="pieza__body">
+            <p class="pieza__q tiza" data-pieza-q>&nbsp;</p>
+            <h3 class="pieza__t" id="pieza-t" data-pieza-t>Medialunas 100% manteca</h3>
+            <p class="pieza__d" data-pieza-d>&nbsp;</p>
+            <div class="pieza__acc">
+              <span class="pieza__precio" data-pieza-precio>Consultar</span>
+              <button type="button" class="btn btn--corteza pieza__add" data-pieza-add>Guardame</button>
+            </div>
+            <p class="pieza__en" data-pieza-en>&nbsp;</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <div class="pieza-fondo" data-pieza-fondo hidden></div>
+</section>
+
+<!-- ============ CARTA ============ -->
+<section class="carta" id="carta" aria-labelledby="carta-t">
+  <div class="carta__in">
+    <header class="sec-cab rv">
+      <p class="tiza sec-cab__k">todo lo que sale del horno</p>
+      <h2 class="sec-cab__t" id="carta-t">La carta</h2>
+      <p class="sec-cab__sub">Una sección por vez. Lo que tiene stock lo podés guardar para retirar hoy; los precios te los confirma el local.</p>
+    </header>
+    <div class="carta__grid rv">
+      <div id="carta-kit" class="carta-kit" data-kit="carta"></div>
+      <figure class="carta__foto" aria-hidden="true">
+        <img src="img/f/medialunas-pastelera-700.webp" alt="" width="700" height="929" data-foto-img decoding="async">
+        <figcaption class="tiza" data-foto-nom>las mismas medialunas, ahora con pastelera</figcaption>
+      </figure>
+    </div>
+    <p class="carta__qr">Esta carta también vive en <a href="carta/">su propia página</a>, la del QR del mostrador: se actualiza sola cuando Ciciliano la edita.</p>
+  </div>
+</section>
+
+<!-- ============ TORTAS POR ENCARGO: el pie de tortas ============ -->
+<section class="tortas" id="tortas" aria-labelledby="tortas-t">
+  <div class="tortas__in">
+    <header class="sec-cab sec-cab--fila rv">
+      <div>
+        <p class="tiza sec-cab__k">mientras más capas, mejor</p>
+        <h2 class="sec-cab__t" id="tortas-t">Tortas por encargo</h2>
+        <p class="sec-cab__sub">Elegí la torta y el día de retiro. Ciciliano te confirma precio y tamaño por WhatsApp. <span data-proximo>Se encargan con 48 hs.</span></p>
+      </div>
+      <div class="flechas" aria-hidden="false">
+        <button type="button" class="flecha" data-tortas-prev aria-label="Torta anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="flecha" data-tortas-next aria-label="Torta siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </header>
+    <div class="pies rv" data-pies aria-label="Tortas enteras"></div>
+    <div class="regalar rv">
+      <div class="regalar__cab">
+        <h3 class="regalar__t">Para el finde y para regalar</h3>
+        <p class="regalar__sub">Docenas, cajas armadas y lo de las fiestas, para retirar el día que elijas.</p>
+      </div>
+      <div class="regalar__lista" data-regalar></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO LO HACEMOS ============ -->
+<section class="capas" id="capas" aria-labelledby="capas-t">
+  <div class="capas__in">
+    <header class="sec-cab rv">
+      <p class="tiza sec-cab__k">tiempo y materia prima</p>
+      <h2 class="sec-cab__t" id="capas-t">Cómo lo hacemos</h2>
+    </header>
+    <ol class="pasos" data-pasos>
+      <li class="paso rv" style="--d:0">
+        <figure class="paso__foto"><img src="img/f/pan-rebanado-700.webp" alt="Pan de campo de masa madre cortado" width="700" height="828" loading="lazy" decoding="async" draggable="false"></figure>
+        <span class="paso__n tiza">1</span>
+        <h3 class="paso__t">Masa madre</h3>
+        <p class="paso__d">Fermentación natural: más sabor, corteza crujiente y más nutrientes. Harina orgánica en el pan de campo.</p>
+      </li>
+      <li class="paso rv" style="--d:1">
+        <figure class="paso__foto"><img src="img/f/fosforitos-700.webp" alt="Capas de hojaldre de un fosforito" width="700" height="928" loading="lazy" decoding="async" draggable="false"></figure>
+        <span class="paso__n tiza">2</span>
+        <h3 class="paso__t">Manteca de verdad</h3>
+        <p class="paso__d">Medialunas 100% manteca y hojaldre crocante, capa sobre capa.</p>
+      </li>
+      <li class="paso rv" style="--d:2">
+        <figure class="paso__foto"><img src="img/f/pincelado-800.webp" alt="Croissants recién pincelados" width="800" height="1066" loading="lazy" decoding="async" draggable="false"></figure>
+        <span class="paso__n tiza">3</span>
+        <h3 class="paso__t">El tiempo justo</h3>
+        <p class="paso__d">“El secreto de una medialuna perfecta está en el tiempo y la materia prima.”</p>
+      </li>
+      <li class="paso rv" style="--d:3">
+        <figure class="paso__foto"><img src="img/f/palmeritas-bandeja-700.webp" alt="Bandeja de palmeritas recién horneadas" width="700" height="933" loading="lazy" decoding="async" draggable="false"></figure>
+        <span class="paso__n tiza">4</span>
+        <h3 class="paso__t">A la vidriera</h3>
+        <p class="paso__d">Sale del horno y va a la bandeja de hoy. Cuando se termina, se terminó: hasta agotar stock.</p>
+      </li>
+    </ol>
+    <div class="lupa rv">
+      <div class="lupa__txt">
+        <h3 class="lupa__t">Contá las capas</h3>
+        <p class="lupa__d">Arrastrá la línea sobre la medialuna abierta.</p>
+        <p class="lupa__nom tiza" data-lupa-nom aria-live="polite">capas de manteca</p>
+      </div>
+      <div class="lupa__fig" data-lupa>
+        <img src="img/f/medialuna-corte-700.webp" srcset="img/f/medialuna-corte-700.webp 700w, img/f/medialuna-corte-1100.webp 1100w" sizes="(min-width: 900px) 560px, 90vw" alt="Medialuna abierta en la mano: se ven las capas del laminado" width="700" height="707" loading="lazy" decoding="async" draggable="false">
+        <span class="lupa__linea" data-lupa-linea aria-hidden="true"><span class="lupa__manija"></span></span>
+        <label class="sr" for="lupa-r">Mover la línea</label>
+        <input class="lupa__rango" id="lupa-r" type="range" min="0" max="100" value="44" data-lupa-r>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEÑAS ============ -->
+<section class="resenas" id="resenas" aria-labelledby="resenas-t">
+  <div class="resenas__in rv">
+    <div class="resenas__nota">
+      <span class="resenas__num">4,8</span>
+      <span class="estrellas" role="img" aria-label="4,8 de 5 estrellas"><i></i><i></i><i></i><i></i><i class="casi"></i></span>
+      <span class="resenas__de">4,8/5 · 166 reseñas en Google</span>
+    </div>
+    <div class="resenas__txt">
+      <h2 class="resenas__t" id="resenas-t">El barrio ya lo sabe</h2>
+      <p>Coghlan le pone 4,8 sobre 5. Las reseñas completas, con su puntaje, están en Google Maps.</p>
+      <a class="btn btn--linea" href="https://www.google.com/maps/search/?api=1&amp;query=Ciciliano+Av.+Congreso+3201+CABA" target="_blank" rel="noopener">Leer las reseñas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISITANOS ============ -->
+<section class="visitanos" id="visitanos" aria-labelledby="visitanos-t">
+  <div class="visitanos__in">
+    <div class="visitanos__datos rv">
+      <p class="tiza sec-cab__k">desde la vereda</p>
+      <h2 class="sec-cab__t" id="visitanos-t">Visitanos</h2>
+      <p class="visitanos__dir">Av. Congreso 3201, Coghlan, CABA</p>
+      <ul class="horario" data-horario>
+        <li data-dia="2"><span>Martes</span><span>8:30 a 18:00 hs</span></li>
+        <li data-dia="3"><span>Miércoles</span><span>8:30 a 18:00 hs</span></li>
+        <li data-dia="4"><span>Jueves</span><span>8:30 a 18:00 hs</span></li>
+        <li data-dia="5"><span>Viernes</span><span>8:30 a 18:00 hs</span></li>
+        <li data-dia="6"><span>Sábado</span><span>8:30 a 18:00 hs</span></li>
+        <li data-dia="0"><span>Domingo</span><span>8:30 a 16:00 hs</span></li>
+        <li data-dia="1"><span>Lunes</span><span>Cerrado</span></li>
+      </ul>
+      <p class="visitanos__stock tiza">o hasta agotar stock</p>
+      <div class="visitanos__ctas">
+        <a class="btn btn--corteza" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+Congreso+3201,+CABA" target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="btn btn--linea" href="https://instagram.com/ciciliano.ar" target="_blank" rel="noopener">@ciciliano.ar</a>
+      </div>
+    </div>
+    <div class="visitanos__mapa rv">
+      <iframe title="Mapa: Ciciliano en Av. Congreso 3201" src="https://www.google.com/maps?q=Av.+Congreso+3201,+C1430+CABA&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="pie__in">
+    <img src="img/logo-claro.svg" alt="Ciciliano" width="2419" height="477" class="pie__logo" loading="lazy">
+    <p class="pie__lema tiza">pan de masa madre · laminados · café de especialidad</p>
+    <div class="pie__cols">
+      <p>Av. Congreso 3201<br>Coghlan, CABA</p>
+      <p>Martes a sábados 8:30 a 18:00 hs<br>Domingos 8:30 a 16:00 hs</p>
+      <p><a href="https://instagram.com/ciciliano.ar" target="_blank" rel="noopener">Instagram @ciciliano.ar</a><br><a href="carta/">Carta online</a><br><a href="admin/" target="_blank" rel="noopener">Panel del dueño (demo)</a></p>
+    </div>
+    <p class="pie__credito">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></p>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js?v=1"></script>
+</body>
+</html>

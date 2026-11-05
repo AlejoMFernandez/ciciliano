@@ -1,0 +1,474 @@
+{
+ "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+ "id": "ciciliano",
+ "nombre": "Ciciliano",
+ "instagram": "ciciliano.ar",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "demoVersion": 1,
+ "whatsapp": "5491100000000",
+ "prefijoPedido": "CC",
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/logo.svg",
+  "logoPanel": "img/logo-claro.svg",
+  "logoClaro": "img/logo-claro.svg",
+  "favicon": "img/favicon.png",
+  "colores": {
+   "fondo": "#F2E8D5",
+   "superficie": "#FBF7EF",
+   "texto": "#2A1F1A",
+   "primario": "#8A4A1F",
+   "acento": "#C77A2E",
+   "borde": "#D9C9AE"
+  },
+  "fuentes": {
+   "titulos": "'Fraunces', Georgia, serif",
+   "texto": "'Figtree', system-ui, sans-serif",
+   "googleFonts": ""
+  },
+  "estilo": {
+   "forma": "pildora",
+   "sombra": "suave",
+   "borde": "1.5px",
+   "mayusculas": false
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": true,
+  "tienda": true,
+  "reservas": false,
+  "admin": true
+ },
+ "horarios": {
+  "mar": [
+   [
+    "08:30",
+    "18:00"
+   ]
+  ],
+  "mie": [
+   [
+    "08:30",
+    "18:00"
+   ]
+  ],
+  "jue": [
+   [
+    "08:30",
+    "18:00"
+   ]
+  ],
+  "vie": [
+   [
+    "08:30",
+    "18:00"
+   ]
+  ],
+  "sab": [
+   [
+    "08:30",
+    "18:00"
+   ]
+  ],
+  "dom": [
+   [
+    "08:30",
+    "16:00"
+   ]
+  ]
+ },
+ "direccion": "Av. Congreso 3201, Coghlan, CABA",
+ "pedidos": {
+  "salidas": [
+   "whatsapp",
+   "mercadopago"
+  ],
+  "tipos": [
+   "retiro"
+  ],
+  "envio": 0,
+  "minimo": 0,
+  "sinPrecio": "a_confirmar",
+  "retiroHoy": {
+   "cadaMin": 15,
+   "prepMin": 10,
+   "asap": true
+  },
+  "encargo": {
+   "anticipacionHoras": 24,
+   "diasAdelante": 14,
+   "franjas": [
+    {
+     "id": "manana",
+     "nombre": "Mañana",
+     "desde": "08:30",
+     "hasta": "12:30"
+    },
+    {
+     "id": "tarde",
+     "nombre": "Tarde",
+     "desde": "12:30",
+     "hasta": "18:00"
+    }
+   ]
+  }
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  }
+ },
+ "carta": {
+  "stock": true,
+  "stockAviso": 5,
+  "categorias": [
+   {
+    "id": "medialunas",
+    "nombre": "Medialunas y croissants",
+    "orden": 1,
+    "bajada": "Manteca de verdad. Se pueden guardar para retirar hoy."
+   },
+   {
+    "id": "hojaldres",
+    "nombre": "Hojaldres y rolls",
+    "orden": 2,
+    "bajada": "Crujientes, con manteca de verdad. Se pueden guardar para retirar hoy."
+   },
+   {
+    "id": "danesas",
+    "nombre": "Danesas",
+    "orden": 3,
+    "bajada": "Base de hojaldre, dulces y saladas."
+   },
+   {
+    "id": "panes",
+    "nombre": "Panes",
+    "orden": 4,
+    "bajada": "Masa madre y fermentación natural: corteza crujiente y miga abierta."
+   },
+   {
+    "id": "focaccias",
+    "nombre": "Focaccias",
+    "orden": 5,
+    "bajada": "Un clásico para cualquier momento del día."
+   },
+   {
+    "id": "t-tortas",
+    "nombre": "Tortas enteras",
+    "orden": 6,
+    "tienda": true,
+    "anticipacionHoras": 48,
+    "sena": 0.5,
+    "bajada": "Por encargo. Elegís el día de retiro y el local te confirma precio y tamaño por WhatsApp."
+   },
+   {
+    "id": "t-finde",
+    "nombre": "Para el finde y para regalar",
+    "orden": 7,
+    "tienda": true,
+    "anticipacionHoras": 24,
+    "bajada": "Docenas y cajas armadas para retirar el día que elijas."
+   },
+   {
+    "id": "t-fiestas",
+    "nombre": "Fiestas",
+    "orden": 8,
+    "tienda": true,
+    "especial": true,
+    "desde": "2026-12-01",
+    "hasta": "2026-12-24",
+    "avisoDias": 45,
+    "anticipacionHoras": 48,
+    "bajada": "Pan dulce de la casa, por encargo para las fiestas."
+   }
+  ],
+  "productos": [
+   {
+    "id": "medialunas",
+    "categoria": "medialunas",
+    "nombre": "Medialunas 100% manteca",
+    "descripcion": "100% manteca: el secreto está en el tiempo y la materia prima.",
+    "precio": null,
+    "foto": "img/f/medialunas-700.webp",
+    "stock": 22,
+    "stockBase": 40
+   },
+   {
+    "id": "medialunas-pastelera",
+    "categoria": "medialunas",
+    "nombre": "Medialunas con pastelera",
+    "descripcion": "Las mismas medialunas, ahora con crema pastelera.",
+    "precio": null,
+    "foto": "img/f/medialunas-pastelera-700.webp",
+    "stock": 8,
+    "stockBase": 20
+   },
+   {
+    "id": "medialuna-jyq",
+    "categoria": "medialunas",
+    "nombre": "Medialuna de jamón y queso",
+    "descripcion": "Medialuna de manteca rellena.",
+    "precio": null,
+    "stock": 6,
+    "stockBase": 12
+   },
+   {
+    "id": "croissant",
+    "categoria": "medialunas",
+    "nombre": "Croissant",
+    "descripcion": "Hay antojos que merecen ser cumplidos, y un croissant recién horneado es uno de ellos.",
+    "precio": null,
+    "foto": "img/f/croissant-700.webp",
+    "stock": 14,
+    "stockBase": 24
+   },
+   {
+    "id": "pain-chocolat",
+    "categoria": "medialunas",
+    "nombre": "Pain au chocolat",
+    "descripcion": "Masa de croissant con chocolate.",
+    "precio": null,
+    "stock": 5,
+    "stockBase": 16
+   },
+   {
+    "id": "palmeritas",
+    "categoria": "hojaldres",
+    "nombre": "Palmeritas",
+    "descripcion": "Crujientes, dulces y con manteca de verdad.",
+    "precio": null,
+    "foto": "img/f/palmeritas-700.webp",
+    "stock": 20,
+    "stockBase": 30
+   },
+   {
+    "id": "fosforitos",
+    "categoria": "hojaldres",
+    "nombre": "Fosforitos",
+    "descripcion": "Hojaldre crocante, los más ricos del barrio.",
+    "precio": null,
+    "foto": "img/f/fosforitos-700.webp",
+    "stock": 7,
+    "stockBase": 16
+   },
+   {
+    "id": "fosforitos-jyq",
+    "categoria": "hojaldres",
+    "nombre": "Fosforitos de jamón y queso",
+    "descripcion": "Masa hojaldrada, crocante y con el toque justo de dulzura, rellena de jamón y queso.",
+    "precio": null,
+    "foto": "img/f/fosforitos-jyq-700.webp",
+    "stock": 6,
+    "stockBase": 16
+   },
+   {
+    "id": "roll-canela",
+    "categoria": "hojaldres",
+    "nombre": "Roll de canela con frosting",
+    "descripcion": "Crujiente por fuera, tierno por dentro y canela por todas partes.",
+    "precio": null,
+    "foto": "img/f/roll-canela-700.webp",
+    "stock": 0,
+    "stockBase": 18
+   },
+   {
+    "id": "danesa-pera",
+    "categoria": "danesas",
+    "nombre": "Danesa de pera y crumble",
+    "descripcion": "Nuestro nuevo producto estrella: pastelera, pera y crumble por arriba.",
+    "precio": null,
+    "foto": "img/f/danesa-pera-700.webp",
+    "stock": 3,
+    "stockBase": 12,
+    "etiquetas": [
+     "nuevo"
+    ]
+   },
+   {
+    "id": "danesa-frutas",
+    "categoria": "danesas",
+    "nombre": "Danesa de pastelera y frutas",
+    "descripcion": "Pastelera casera y fruta fresca arriba: frutillas, cerezas y arándanos.",
+    "precio": null,
+    "foto": "img/f/danesa-frutas-700.webp",
+    "stock": 6,
+    "stockBase": 12
+   },
+   {
+    "id": "danesa-salada",
+    "categoria": "danesas",
+    "nombre": "Danesa salada",
+    "descripcion": "Muzzarella, roquefort, tomate cherry, romero fresco y aceite de oliva orgánico sobre hojaldre.",
+    "precio": null,
+    "foto": "img/f/danesa-salada-700.webp",
+    "stock": 0,
+    "stockBase": 10
+   },
+   {
+    "id": "pan-campo",
+    "categoria": "panes",
+    "nombre": "Pan de campo blanco",
+    "descripcion": "Harina orgánica y masa madre. Un clásico lleno de sabor.",
+    "precio": null,
+    "foto": "img/f/pan-campo-700.webp",
+    "stock": 4,
+    "stockBase": 12
+   },
+   {
+    "id": "mignon",
+    "categoria": "panes",
+    "nombre": "Mignon",
+    "descripcion": "Uno de los panes más elegidos.",
+    "precio": null,
+    "foto": "img/f/mignon-700.webp",
+    "stock": 18,
+    "stockBase": 30
+   },
+   {
+    "id": "baguette",
+    "categoria": "panes",
+    "nombre": "Baguette de masa madre y biga",
+    "descripcion": "Para los amantes de la corteza. Ideal para el asado o las pastas del domingo.",
+    "precio": null,
+    "foto": "img/f/baguette-700.webp",
+    "stock": 9,
+    "stockBase": 16
+   },
+   {
+    "id": "lactal-integral",
+    "categoria": "panes",
+    "nombre": "Pan lactal integral con semillas",
+    "descripcion": "La mejor opción para el desayuno.",
+    "precio": null,
+    "foto": "img/f/lactal-700.webp",
+    "stock": 3,
+    "stockBase": 8
+   },
+   {
+    "id": "lactal-blanco",
+    "categoria": "panes",
+    "nombre": "Pan lactal blanco",
+    "descripcion": "También en versión blanca.",
+    "precio": null,
+    "stock": 5,
+    "stockBase": 8
+   },
+   {
+    "id": "focaccia-morrones",
+    "categoria": "focaccias",
+    "nombre": "Focaccia de morrones",
+    "descripcion": "Tomate cherry, pimiento rojo, muzzarella, cebolla y especias.",
+    "precio": null,
+    "foto": "img/f/focaccia-700.webp",
+    "stock": 4,
+    "stockBase": 8
+   },
+   {
+    "id": "focaccia-roquefort",
+    "categoria": "focaccias",
+    "nombre": "Focaccia de roquefort y cherry",
+    "descripcion": "Roquefort y tomates cherry.",
+    "precio": null,
+    "stock": 2,
+    "stockBase": 6
+   },
+   {
+    "id": "rogel",
+    "categoria": "t-tortas",
+    "nombre": "Rogel",
+    "descripcion": "Más de 2 kg de sabor y pura tradición argentina, coronado con merengue italiano.",
+    "precio": null,
+    "foto": "img/f/rogel-700.webp"
+   },
+   {
+    "id": "torta-brownie",
+    "categoria": "t-tortas",
+    "nombre": "Torta brownie",
+    "descripcion": "Base de chocolate cobertura, dulce de leche y merengue italiano.",
+    "precio": null,
+    "foto": "img/f/brownie-700.webp"
+   },
+   {
+    "id": "brownie-frutos",
+    "categoria": "t-tortas",
+    "nombre": "Torta brownie con frutos rojos",
+    "descripcion": "Brownie húmedo, capas de dulce de leche, merengue italiano y frutos rojos frescos.",
+    "precio": null,
+    "foto": "img/f/brownie-frutos-700.webp"
+   },
+   {
+    "id": "cheesecake",
+    "categoria": "t-tortas",
+    "nombre": "Cheesecake de frutos rojos",
+    "descripcion": "Suave, cremoso, con mermelada casera de frutos rojos.",
+    "precio": null,
+    "foto": "img/f/cheesecake-700.webp"
+   },
+   {
+    "id": "key-lime",
+    "categoria": "t-tortas",
+    "nombre": "Key lime pie",
+    "descripcion": "Ligero y lleno de sabor.",
+    "precio": null,
+    "foto": "img/f/keylime-700.webp"
+   },
+   {
+    "id": "docena-medialunas",
+    "categoria": "t-finde",
+    "nombre": "Docena de medialunas 100% manteca",
+    "descripcion": "Para el desayuno del finde: encargala y pasala a buscar.",
+    "precio": null,
+    "foto": "img/f/medialunas-700.webp"
+   },
+   {
+    "id": "box-surtido",
+    "categoria": "t-finde",
+    "nombre": "Box Ciciliano",
+    "descripcion": "Fosforito de jamón y queso, porción de torta, roll de canela, palmeritas y medialunas. Para regalar.",
+    "precio": null,
+    "foto": "img/f/box-700.webp"
+   },
+   {
+    "id": "pan-dulce",
+    "categoria": "t-fiestas",
+    "nombre": "Pan dulce de la casa",
+    "descripcion": "Chocolate semiamargo, frutos secos, naranjas confitadas caseras y capa crocante de almendras.",
+    "precio": null,
+    "foto": "img/f/pan-dulce-700.webp"
+   }
+  ]
+ },
+ "textos": {
+  "tuPedido": "Tu bolsa",
+  "verPedido": "Ver tu bolsa",
+  "agregar": "Guardame",
+  "agregado": "Guardado",
+  "aConfirmar": "Consultar",
+  "avisoSinPrecio": "Los precios te los confirma Ciciliano por WhatsApp antes de guardártelo.",
+  "carritoVacio": "Tu bolsa está vacía.",
+  "carritoVacioSub": "Elegí algo de la bandeja de hoy y aparece acá.",
+  "porWhatsapp": "Guardámelo por WhatsApp",
+  "porWhatsappSub": "Te lo apartamos y pagás al retirar",
+  "enviarPedido": "Guardámelo",
+  "rhTitulo": "¿A qué hora pasás?",
+  "pedidoListo": "¡Te lo guardamos!",
+  "pedidoListoSub": "Tu código es {codigo}. Ciciliano lo ve en su panel y te escribe por WhatsApp.",
+  "stockBase": "Horneada del día",
+  "stockBaseAyuda": "Lo que sale del horno cada mañana. “Cargar la horneada” lo vuelve a poner.",
+  "cargarStock": "Cargar la horneada del día",
+  "cargarStockSeguro": "¿Volver a cargar la horneada del día en todos los productos?",
+  "cargarStockOk": "Listo: horneada del día cargada.",
+  "vendidoN": "{n} guardadas",
+  "agotadoHoy": "Agotado por hoy",
+  "ultimasN": "Últimas {n}",
+  "abiertoCierra": "Abierto · cierra {h} hs",
+  "cerradoAbre": "Cerrado · abre {h} hs"
+ }
+}
