@@ -461,30 +461,6 @@ function pintarProximo() {
 }
 
 /* =========================================================
-   CONTÁ LAS CAPAS
-   ========================================================= */
-const lupa = $('[data-lupa]');
-const linea = $('[data-lupa-linea]');
-const rango = $('[data-lupa-r]');
-const nomCapa = $('[data-lupa-nom]');
-const CAPAS = [[36, 'corteza dorada'], [47, 'capas de manteca'], [56, 'el corazón tierno'], [68, 'alvéolos abiertos'], [101, 'corteza dorada']];
-function moverLupa(pct) {
-  pct = Math.max(2, Math.min(98, pct));
-  linea.style.left = pct + '%';
-  rango.value = Math.round(pct);
-  const nom = CAPAS.find(([h]) => pct < h)[1];
-  if (nomCapa.textContent !== nom) nomCapa.textContent = nom;
-}
-let arrLupa = false;
-function pctDe(e) { const r = lupa.getBoundingClientRect(); return ((e.clientX - r.left) / r.width) * 100; }
-lupa.addEventListener('pointerdown', (e) => { arrLupa = true; lupa.setPointerCapture?.(e.pointerId); moverLupa(pctDe(e)); });
-lupa.addEventListener('pointermove', (e) => { if (arrLupa) moverLupa(pctDe(e)); else if (e.pointerType === 'mouse') moverLupa(pctDe(e)); });
-lupa.addEventListener('pointerup', () => { arrLupa = false; });
-lupa.addEventListener('pointercancel', () => { arrLupa = false; });
-rango.addEventListener('input', () => moverLupa(Number(rango.value)));
-moverLupa(44);
-
-/* =========================================================
    TODO JUNTO + se actualiza cuando el dueño edita en /admin
    ========================================================= */
 function pintarTodo() { pintarTicket(); pintarBandeja(); pintarTortas(); pintarProximo(); contar(); }

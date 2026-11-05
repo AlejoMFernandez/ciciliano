@@ -478,7 +478,7 @@ html.js .rv.visto { opacity: 1; transform: none; }
 @media (min-width: 900px) and (max-width: 1099px) { .regalar { grid-template-columns: 1fr; } }
 
 /* =========================================================
-   CÓMO LO HACEMOS + CONTÁ LAS CAPAS
+   CÓMO LO HACEMOS
    ========================================================= */
 .capas { padding: var(--aire) 0 0; }
 .capas__in { max-width: calc(var(--max) + 2 * var(--pad)); margin: 0 auto; }
@@ -499,23 +499,6 @@ html.js .rv.visto { opacity: 1; transform: none; }
 @media (min-width: 900px) {
   .pasos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; overflow: visible; padding: 0 var(--pad); max-width: calc(var(--max) + 2 * var(--pad)); margin: 0 auto; cursor: auto; user-select: auto; -webkit-user-select: auto; }
   .paso { max-width: none; }
-}
-
-.lupa { margin: clamp(48px, 7vw, 90px) var(--pad) 0; background: var(--vidriera); color: var(--tiza); border-radius: 28px; padding: clamp(24px, 4vw, 52px); display: grid; gap: 26px; }
-.lupa__t { font-size: clamp(32px, 7vw, 48px); }
-.lupa__d { color: var(--gris); margin-top: 8px; }
-.lupa__nom { margin-top: 14px; font-size: 34px; color: var(--oro); line-height: 1.1; min-height: 1.2em; }
-.lupa__fig { position: relative; border-radius: 22px; overflow: hidden; touch-action: pan-y; cursor: ew-resize; user-select: none; -webkit-user-select: none; aspect-ratio: 700 / 707; background: #2E3432; }
-.lupa__fig img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
-.lupa__linea { position: absolute; top: 0; bottom: 0; left: 22%; width: 3px; margin-left: -1.5px; background: var(--tiza); box-shadow: 0 0 0 1px rgba(0, 0, 0, .25); pointer-events: none; }
-.lupa__manija { position: absolute; top: 50%; left: 50%; width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 50%; background: var(--tiza); box-shadow: 0 8px 18px -6px rgba(0, 0, 0, .6); }
-.lupa__manija::before, .lupa__manija::after { content: ""; position: absolute; top: 50%; width: 0; height: 0; border: 7px solid transparent; margin-top: -7px; }
-.lupa__manija::before { left: 6px; border-right-color: var(--tinta); }
-.lupa__manija::after { right: 6px; border-left-color: var(--tinta); }
-.lupa__rango { position: absolute; inset: auto 0 0 0; width: 100%; opacity: 0; height: 1px; pointer-events: none; }
-.lupa__rango:focus-visible + * , .lupa__fig:focus-within { outline: 3px solid var(--oro); outline-offset: 3px; }
-@media (min-width: 900px) {
-  .lupa { grid-template-columns: minmax(0, 1fr) minmax(0, 560px); align-items: center; gap: 56px; margin-inline: max(var(--pad), calc((100vw - var(--max)) / 2)); }
 }
 
 /* =========================================================
